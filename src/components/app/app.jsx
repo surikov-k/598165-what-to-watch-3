@@ -12,6 +12,7 @@ const App = (props) => {
     <Main
       movie={movie}
       titles={titles}
+      onMovieTitleClick={(e) => e.preventDefault()}
     />
   );
 };

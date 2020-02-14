@@ -10,7 +10,7 @@ const movie = {
 };
 
 const titles = [
-  `Fantas;tic Beasts: The Crimes of Grindelwald`,
+  `Fantastic Beasts: The Crimes of Grindelwald`,
   `Bohemian Rhapsody`,
   `Macbeth`,
   `Aviator`,
