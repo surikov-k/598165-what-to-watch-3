@@ -2,28 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Main from '../main/main.jsx';
+import {movieType} from '../../types';
 
 const App = (props) => {
   const {
-    movie,
-    titles,
+    movies, promo,
   } = props;
   return (
     <Main
-      movie={movie}
-      titles={titles}
-      onMovieTitleClick={(e) => e.preventDefault()}
+      movies={movies}
+      promo={promo}
+      onMovieTitleClick={() => {}}
     />
   );
 };
 
 App.propTypes = {
-  movie: PropTypes.shape({
-    title: PropTypes.string,
-    genre: PropTypes.string,
-    released: PropTypes.number,
-  }).isRequired,
-  titles: PropTypes.arrayOf(PropTypes.string).isRequired,
+  movies: PropTypes.arrayOf(PropTypes.shape(movieType)).isRequired,
+  promo: PropTypes.shape(movieType).isRequired,
 };
 
 export default App;
