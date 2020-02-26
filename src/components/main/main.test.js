@@ -3,20 +3,41 @@ import renderer from 'react-test-renderer';
 
 import Main from './main.jsx';
 
-const movie = {
+const promo = {
+  id: 0,
   title: ``,
   genre: ``,
-  released: 0,
+  release: 0,
+  rating: 0,
+  description: [``],
+  director: [``],
+  cast: [``],
+  previewSrc: ``,
+  poster: ``,
+  background: ``,
 };
-const titles = Array(20).fill(``);
+const movies = [{
+  id: 0,
+  title: ``,
+  genre: ``,
+  release: 0,
+  rating: 0,
+  description: [``],
+  director: [``],
+  cast: [``],
+  previewSrc: ``,
+  poster: ``,
+  background: ``,
+}];
+
 const onMovieTitleClick = jest.fn();
 
 describe(`<Main/>`, () => {
   it(`renders correctly`, () => {
     const component = renderer
       .create(<Main
-        movie={movie}
-        titles={titles}
+        promo={promo}
+        movies={movies}
         onMovieTitleClick={onMovieTitleClick}
       />)
       .toJSON();

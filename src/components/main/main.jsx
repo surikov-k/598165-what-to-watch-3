@@ -1,19 +1,19 @@
 import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 
+import MoviesList from '../movies-list/movies-list.jsx';
+
 const Main = (props) => {
 
   const {
-    movie,
-    titles,
+    movies,
+    promo,
     onMovieTitleClick,
   } = props;
 
   const {
-    title,
-    genre,
-    released
-  } = movie;
+    title, genre, release
+  } = promo;
 
   return (
     <Fragment>
@@ -50,7 +50,7 @@ const Main = (props) => {
               <h2 className="movie-card__title">{title}</h2>
               <p className="movie-card__meta">
                 <span className="movie-card__genre">{genre}</span>
-                <span className="movie-card__year">{released}</span>
+                <span className="movie-card__year">{release}</span>
               </p>
 
               <div className="movie-card__buttons">
@@ -109,316 +109,10 @@ const Main = (props) => {
             </li>
           </ul>
 
-          <div className="catalog__movies-list">
-            <article className="small-movie-card catalog__movies-card">
-              <div className="small-movie-card__image">
-                <img src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg" alt="Fantastic Beasts: The Crimes of Grindelwald" width="280" height="175" />
-              </div>
-              <h3 className="small-movie-card__title">
-                <a
-                  className="small-movie-card__link"
-                  href="movie-page.html"
-                  onClick={onMovieTitleClick}
-                >
-                  {titles[0]}
-                </a>
-              </h3>
-            </article>
-
-            <article className="small-movie-card catalog__movies-card">
-              <div className="small-movie-card__image">
-                <img src="img/bohemian-rhapsody.jpg" alt="Bohemian Rhapsody" width="280" height="175" />
-              </div>
-              <h3 className="small-movie-card__title">
-                <a
-                  className="small-movie-card__link"
-                  href="movie-page.html"
-                  onClick={onMovieTitleClick}
-                >
-                  {titles[1]}
-                </a>
-              </h3>
-            </article>
-
-            <article className="small-movie-card catalog__movies-card">
-              <div className="small-movie-card__image">
-                <img src="img/macbeth.jpg" alt="Macbeth" width="280" height="175" />
-              </div>
-              <h3 className="small-movie-card__title">
-                <a
-                  className="small-movie-card__link"
-                  href="movie-page.html"
-                  onClick={onMovieTitleClick}
-                >
-                  {titles[2]}
-                </a>
-              </h3>
-            </article>
-
-            <article className="small-movie-card catalog__movies-card">
-              <div className="small-movie-card__image">
-                <img src="img/aviator.jpg" alt="Aviator" width="280" height="175" />
-              </div>
-              <h3 className="small-movie-card__title">
-                <a
-                  className="small-movie-card__link"
-                  href="movie-page.html"
-                  onClick={onMovieTitleClick}
-                >
-                  {titles[3]}
-                </a>
-              </h3>
-            </article>
-
-
-            <article className="small-movie-card catalog__movies-card">
-              <div className="small-movie-card__image">
-                <img src="img/we-need-to-talk-about-kevin.jpg" alt="We need to talk about Kevin" width="280" height="175" />
-              </div>
-              <h3 className="small-movie-card__title">
-                <a
-                  className="small-movie-card__link"
-                  href="movie-page.html"
-                  onClick={onMovieTitleClick}
-                >
-                  {titles[4]}
-                </a>
-              </h3>
-            </article>
-
-            <article className="small-movie-card catalog__movies-card">
-              <div className="small-movie-card__image">
-                <img src="img/what-we-do-in-the-shadows.jpg" alt="What We Do in the Shadows" width="280" height="175" />
-              </div>
-              <h3 className="small-movie-card__title">
-                <a
-                  className="small-movie-card__link"
-                  href="movie-page.html"
-                  onClick={onMovieTitleClick}
-                >
-                  {titles[5]}
-                </a>
-              </h3>
-            </article>
-
-            <article className="small-movie-card catalog__movies-card">
-              <div className="small-movie-card__image">
-                <img src="img/revenant.jpg" alt="Revenant" width="280" height="175" />
-              </div>
-              <h3 className="small-movie-card__title">
-                <a
-                  className="small-movie-card__link"
-                  href="movie-page.html"
-                  onClick={onMovieTitleClick}
-                >
-                  {titles[6]}
-                </a>
-              </h3>
-            </article>
-
-            <article className="small-movie-card catalog__movies-card">
-              <div className="small-movie-card__image">
-                <img src="img/johnny-english.jpg" alt="Johnny English" width="280" height="175" />
-              </div>
-              <h3 className="small-movie-card__title">
-                <a
-                  className="small-movie-card__link"
-                  href="movie-page.html"
-                  onClick={onMovieTitleClick}
-                >
-                  {titles[7]}
-                </a>
-              </h3>
-            </article>
-
-
-            <article className="small-movie-card catalog__movies-card">
-              <div className="small-movie-card__image">
-                <img src="img/shutter-island.jpg" alt="Shutter Island" width="280" height="175" />
-              </div>
-              <h3 className="small-movie-card__title">
-                <a
-                  className="small-movie-card__link"
-                  href="movie-page.html"
-                  onClick={onMovieTitleClick}
-                >
-                  {titles[8]}
-                </a>
-              </h3>
-            </article>
-
-            <article className="small-movie-card catalog__movies-card">
-              <div className="small-movie-card__image">
-                <img src="img/pulp-fiction.jpg" alt="Pulp Fiction" width="280" height="175" />
-              </div>
-              <h3 className="small-movie-card__title">
-                <a
-                  className="small-movie-card__link"
-                  href="movie-page.html"
-                  onClick={onMovieTitleClick}
-                >
-                  {titles[9]}
-                </a>
-              </h3>
-            </article>
-
-            <article className="small-movie-card catalog__movies-card">
-              <div className="small-movie-card__image">
-                <img src="img/no-country-for-old-men.jpg" alt="No Country for Old Men" width="280" height="175" />
-              </div>
-              <h3 className="small-movie-card__title">
-                <a
-                  className="small-movie-card__link"
-                  href="movie-page.html"
-                  onClick={onMovieTitleClick}
-                >
-                  {titles[10]}
-                </a>
-              </h3>
-            </article>
-
-            <article className="small-movie-card catalog__movies-card">
-              <div className="small-movie-card__image">
-                <img src="img/snatch.jpg" alt="Snatch" width="280" height="175" />
-              </div>
-              <h3 className="small-movie-card__title">
-                <a
-                  className="small-movie-card__link"
-                  href="movie-page.html"
-                  onClick={onMovieTitleClick}
-                >
-                  {titles[11]}
-                </a>
-              </h3>
-            </article>
-
-
-            <article className="small-movie-card catalog__movies-card">
-              <div className="small-movie-card__image">
-                <img src="img/moonrise-kingdom.jpg" alt="Moonrise Kingdom" width="280" height="175" />
-
-              </div>
-              <h3 className="small-movie-card__title">
-                <a
-                  className="small-movie-card__link"
-                  href="movie-page.html"
-                  onClick={onMovieTitleClick}
-                >
-                  {titles[12]}
-                </a>
-              </h3>
-            </article>
-
-            <article className="small-movie-card catalog__movies-card">
-              <div className="small-movie-card__image">
-                <img src="img/seven-years-in-tibet.jpg" alt="Seven Years in Tibet" width="280" height="175" />
-              </div>
-              <h3 className="small-movie-card__title">
-                <a
-                  className="small-movie-card__link"
-                  href="movie-page.html"
-                  onClick={onMovieTitleClick}
-                >
-                  {titles[13]}
-                </a>
-              </h3>
-            </article>
-
-            <article className="small-movie-card catalog__movies-card">
-              <div className="small-movie-card__image">
-                <img src="img/midnight-special.jpg" alt="Midnight Special" width="280" height="175" />
-              </div>
-              <h3 className="small-movie-card__title">
-                <a
-                  className="small-movie-card__link"
-                  href="movie-page.html"
-                  onClick={onMovieTitleClick}
-                >
-                  {titles[14]}
-                </a>
-              </h3>
-            </article>
-
-            <article className="small-movie-card catalog__movies-card">
-              <div className="small-movie-card__image">
-                <img src="img/war-of-the-worlds.jpg" alt="War of the Worlds" width="280" height="175" />
-              </div>
-              <h3 className="small-movie-card__title">
-                <a
-                  className="small-movie-card__link"
-                  href="movie-page.html"
-                  onClick={onMovieTitleClick}
-                >
-                  {titles[15]}
-                </a>
-              </h3>
-            </article>
-
-
-            <article className="small-movie-card catalog__movies-card">
-              <div className="small-movie-card__image">
-                <img src="img/dardjeeling-limited.jpg" alt="Dardjeeling Limited" width="280" height="175" />
-              </div>
-              <h3 className="small-movie-card__title">
-                <a
-                  className="small-movie-card__link"
-                  href="movie-page.html"
-                  onClick={onMovieTitleClick}
-                >
-                  {titles[16]}
-                </a>
-              </h3>
-            </article>
-
-            <article className="small-movie-card catalog__movies-card">
-              <div className="small-movie-card__image">
-                <img src="img/orlando.jpg" alt="Orlando" width="280" height="175" />
-              </div>
-              <h3 className="small-movie-card__title">
-                <a
-                  className="small-movie-card__link"
-                  href="movie-page.html"
-                  onClick={onMovieTitleClick}
-                >
-                  {titles[17]}
-                </a>
-              </h3>
-            </article>
-
-            <article className="small-movie-card catalog__movies-card">
-              <div className="small-movie-card__image">
-                <img src="img/mindhunter.jpg" alt="Mindhunter" width="280" height="175" />
-              </div>
-              <h3 className="small-movie-card__title">
-                <a
-                  className="small-movie-card__link"
-                  href="movie-page.html"
-                  onClick={onMovieTitleClick}
-                >
-                  {titles[18]}
-                </a>
-              </h3>
-            </article>
-
-            <article className="small-movie-card catalog__movies-card">
-              <div className="small-movie-card__image">
-                <img src="img/midnight-special.jpg" alt="Midnight Special" width="280" height="175" />
-              </div>
-              <h3 className="small-movie-card__title">
-                <a
-                  className="small-movie-card__link"
-                  href="movie-page.html"
-                  onClick={onMovieTitleClick}
-                >
-                  {titles[19]}
-                </a>
-              </h3>
-            </article>
-          </div>
-
-          <div className="catalog__more">
-            <button className="catalog__button" type="button">Show more</button>
-          </div>
+          <MoviesList
+            movies={movies}
+            onMovieTitleClick={onMovieTitleClick}
+          />
         </section>
 
         <footer className="page-footer">
@@ -440,12 +134,8 @@ const Main = (props) => {
 };
 
 Main.propTypes = {
-  movie: PropTypes.shape({
-    title: PropTypes.string,
-    genre: PropTypes.string,
-    released: PropTypes.number,
-  }).isRequired,
-  titles: PropTypes.arrayOf(PropTypes.string).isRequired,
+  movies: PropTypes.arrayOf(PropTypes.object).isRequired,
+  promo: PropTypes.object.isRequired,
   onMovieTitleClick: PropTypes.func.isRequired,
 };
 
