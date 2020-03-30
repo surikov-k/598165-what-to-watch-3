@@ -9,7 +9,7 @@ export const movieType = {
   description: PropTypes.arrayOf(PropTypes.string).isRequired,
   director: PropTypes.arrayOf(PropTypes.string).isRequired,
   cast: PropTypes.arrayOf(PropTypes.string).isRequired,
-  previewSrc: PropTypes.string.isRequired,
+  preview: PropTypes.string.isRequired,
   poster: PropTypes.string.isRequired,
   background: PropTypes.string.isRequired,
 };

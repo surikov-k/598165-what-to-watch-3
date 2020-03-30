@@ -38,7 +38,7 @@ describe(`<Main/>`, () => {
       .create(<Main
         promo={promo}
         movies={movies}
-        onMovieTitleClick={onMovieTitleClick}
+        onClick={onMovieTitleClick}
       />)
       .toJSON();
     expect(component).toMatchSnapshot();

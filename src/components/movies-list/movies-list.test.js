@@ -11,7 +11,7 @@ const movies = [{
   description: [``],
   director: [``],
   cast: [``],
-  previewSrc: ``,
+  preview: ``,
   poster: ``,
   background: ``,
 }];
@@ -22,7 +22,7 @@ describe(`<MoviesList/>`, () => {
       create(<MoviesList
         movies={movies}
         onMouseEnter={() => {}}
-        onMovieTitleClick={() => {}}
+        onClick={() => {}}
       />).
       toJSON();
     expect(component).toMatchSnapshot();

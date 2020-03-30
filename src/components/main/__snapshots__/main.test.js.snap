@@ -263,21 +263,21 @@ Array [
         >
           <div
             className="small-movie-card__image"
+            onClick={[Function]}
           >
             <img
               alt=""
               height="175"
-              src=""
               width="280"
             />
           </div>
           <h3
             className="small-movie-card__title"
+            onClick={[Function]}
           >
             <a
               className="small-movie-card__link"
               href=""
-              onClick={[Function]}
             >
               
             </a>
@@ -303,6 +303,7 @@ Array [
       >
         <a
           className="logo__link logo__link--light"
+          href="main.html"
         >
           <span
             className="logo__letter logo__letter--1"
@@ -325,7 +326,9 @@ Array [
         className="copyright"
       >
         <p>
-          © 2019 What to watch Ltd.
+          © 2019-
+          2020
+           What to watch Ltd.
         </p>
       </div>
     </footer>

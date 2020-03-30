@@ -12,7 +12,7 @@ const promo = {
   description: [``],
   director: [``],
   cast: [``],
-  previewSrc: ``,
+  preview: ``,
   poster: ``,
   background: ``,
 };
@@ -25,11 +25,11 @@ const movies = [{
   description: [``],
   director: [``],
   cast: [``],
-  previewSrc: ``,
+  preview: ``,
   poster: ``,
   background: ``,
 }];
-const onMovieTitleClick = jest.fn();
+const onClick = jest.fn();
 
 describe(`<App/>`, () => {
   it(`renders correctly`, () => {
@@ -37,7 +37,7 @@ describe(`<App/>`, () => {
       .create(<App
         promo={promo}
         movies={movies}
-        onMovieTitleClick={onMovieTitleClick}
+        onClick={onClick}
       />)
       .toJSON();
     expect(component).toMatchSnapshot();

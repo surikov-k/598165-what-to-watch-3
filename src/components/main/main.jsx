@@ -2,13 +2,14 @@ import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 
 import MoviesList from '../movies-list/movies-list.jsx';
+import Footer from '../footer/footer.jsx';
 
 const Main = (props) => {
 
   const {
     movies,
     promo,
-    onMovieTitleClick,
+    onClick,
   } = props;
 
   const {
@@ -111,23 +112,11 @@ const Main = (props) => {
 
           <MoviesList
             movies={movies}
-            onMovieTitleClick={onMovieTitleClick}
+            onClick={onClick}
           />
         </section>
 
-        <footer className="page-footer">
-          <div className="logo">
-            <a className="logo__link logo__link--light">
-              <span className="logo__letter logo__letter--1">W</span>
-              <span className="logo__letter logo__letter--2">T</span>
-              <span className="logo__letter logo__letter--3">W</span>
-            </a>
-          </div>
-
-          <div className="copyright">
-            <p>© 2019 What to watch Ltd.</p>
-          </div>
-        </footer>
+        <Footer/>
       </div>
     </Fragment >
   );
@@ -136,7 +125,7 @@ const Main = (props) => {
 Main.propTypes = {
   movies: PropTypes.arrayOf(PropTypes.object).isRequired,
   promo: PropTypes.object.isRequired,
-  onMovieTitleClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default Main;

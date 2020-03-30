@@ -54,7 +54,7 @@ const GENRES = [
   `Western`,
 ];
 
-const SMALL_IMAGE_SRCS = [
+const PREVIEWS = [
   `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`,
   `img/bohemian-rhapsody.jpg`,
   `img/macbeth.jpg`,
@@ -76,6 +76,15 @@ const SMALL_IMAGE_SRCS = [
   `img/mindhunter.jpg`,
   `img/midnight-special.jpg`,
 ];
+
+// const POSTERS = [
+//   `img/the-grand-budapest-hotel-poster.jpg`,
+// ];
+
+// const BACKGROUNDS = [
+//   `img/bg-the-grand-budapest-hotel.jpg`,
+// ];
+
 
 const getRandomFromArray = (array) => {
   const idx = Math.round(Math.random() * (array.length - 1));
@@ -103,7 +112,7 @@ const getRandomDate = (inception) => {
 
 export const getMovies = (amount) => {
   const moviesTitles = shuffleArray(TITLES);
-  const smallImageSrss = shuffleArray(SMALL_IMAGE_SRCS);
+  const previews = shuffleArray(PREVIEWS);
   return new Array(amount)
     .fill({})
     .map((_, i) => ({
@@ -115,8 +124,8 @@ export const getMovies = (amount) => {
       description: shuffleArray(DESCRIPTIONS).slice(0, getRandomInt(1, 3)),
       director: shuffleArray(PEOPLES).slice(0, getRandomInt(1, 2)),
       cast: shuffleArray(PEOPLES).slice(0, getRandomFromArray(2, 5)),
-      previewSrc: smallImageSrss[i],
-      poster: ``,
-      background: ``
+      preview: previews[i],
+      poster: previews[i],
+      background: previews[i],
     }));
 };
