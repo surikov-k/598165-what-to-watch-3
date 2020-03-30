@@ -12,7 +12,7 @@ const movie = {
   description: [``],
   director: [``],
   cast: [``],
-  previewSrc: ``,
+  preview: ``,
   poster: ``,
   background: ``,
 };
@@ -23,7 +23,7 @@ describe(`<MovieCard/>`, () => {
       create(<MovieCard
         movie={movie}
         onMouseEnter={() => {}}
-        onMovieTitleClick={() => {}}
+        onClick={() => {}}
       />).
       toJSON();
 

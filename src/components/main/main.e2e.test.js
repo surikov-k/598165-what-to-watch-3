@@ -16,7 +16,7 @@ const promo = {
   description: [``],
   director: [``],
   cast: [``],
-  previewSrc: ``,
+  preview: ``,
   poster: ``,
   background: ``,
 };
@@ -29,7 +29,7 @@ const movies = [{
   description: [``],
   director: [``],
   cast: [``],
-  previewSrc: ``,
+  preview: ``,
   poster: ``,
   background: ``,
 }];
@@ -40,7 +40,7 @@ describe(`<Main/>`, () => {
     const component = mount(<Main
       promo={promo}
       movies={movies}
-      onMovieTitleClick={onMovieTitleClick}
+      onClick={onMovieTitleClick}
     />);
 
     const titleLinks = component.find(`.small-movie-card__link`);

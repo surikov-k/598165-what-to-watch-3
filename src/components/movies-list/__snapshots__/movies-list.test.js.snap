@@ -11,6 +11,7 @@ Array [
     >
       <div
         className="small-movie-card__image"
+        onClick={[Function]}
       >
         <img
           alt=""
@@ -21,11 +22,11 @@ Array [
       </div>
       <h3
         className="small-movie-card__title"
+        onClick={[Function]}
       >
         <a
           className="small-movie-card__link"
           href=""
-          onClick={[Function]}
         >
           
         </a>
